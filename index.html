@@ -1,0 +1,314 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/svgicons/logo-small.svg">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css?_v=20250709180924">
+    <link rel="stylesheet" href="css/style.min.css?_v=20250709180924">
+    <script defer src="js/app.min.js?_v=20250709180924"></script>
+    <title>Главная</title>
+</head>
+
+    <body>
+        <div class="wrapper">
+            <header class="header">
+    <div class="container">
+        <div class="header__row">
+            <a href="/" class="header__logo">
+                <img src="img/svgicons/logo.svg" alt="logo">
+            </a>
+            <nav class="header__nav">
+                <a href="#">О системе</a>
+                <a href="#">Архитектура</a>
+                <a href="#">Мнения</a>
+                <a href="#" class="green">Попробовать</a>
+                <a href="#">Для своих</a>
+            </nav>
+            <button class="header__burger">
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+<svg
+    width="54"
+    height="20"
+    display="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <symbol id="arrow-left" viewBox="0 0 54 20" fill="none">
+        <g>
+            <path d="M10 0V0C10 5.52285 5.52285 10 2.38419e-07 10V10" stroke-width="2"/>
+            <path d="M10.125 20V20C10.125 14.4772 5.64785 10 0.125 10H0H54" stroke-width="2"/>
+        </g>
+    </symbol>
+</svg>
+
+            <main class="content">
+                <section class="intro section">
+                    <div class="container">
+                        <main class="intro__row white">
+                            <video
+                                src="./files/intro.mp4"
+                                muted
+                                autoplay
+                                preload
+                                playsinline
+                                loop
+                                poster="img/intro/video-poster.png"
+                            ></video>
+                            <div class="intro__info">
+                                <h1>
+                                    Просто потому
+                                    <br>
+                                    что можем
+                                    <span>c Collagen</span>
+                                </h1>
+                                <p>
+                                    <span class="pc">
+                                        Мы запустили основной цикл в 06:42.
+                                    
+                                        Результаты наблюдаются, но не зафиксированы.
+                                        
+                                        Рекомендуем сохранять спокойствие до
+                                        
+                                        следующего сигнала.
+                                    </span>
+                                    <span class="mobile">Мы сделали это средство не ради прибыли, а из любви к красивым словам. Один стик в день — и вы чувствуете, что делаете что-то важное. Что именно — решать вам.</span>
+                                </p>
+                                <a href="#" class="btn btn-with-arrow green">
+                                    Попробовать просто так
+                                    <div class="btn-with-arrow__arrow">
+                                        <svg>
+                                            <use xlink:href="#arrow-left"></use>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="intro__sertificate">
+                                <p>
+                                    Сертификат есть. Но это не точно.
+                                </p>
+                                <p>
+                                    <span>СГР №AM.01.01</span>
+                                    .01.003.R.00 o47 4.06.24
+                                </p>
+                            </div>
+                        </main>
+                    </div>
+                </section>
+                <section class="sub-intro section">
+                    <div class="container">
+                        <aside class="sub-intro__aside">
+                            <h2>Это — не совсем то, что вы думаете</h2>
+                            <article class="btns">
+                                <button class="swiper-button-prev sub-intro__prev">
+                                    <svg>
+                                        <use xlink:href="#arrow-left"></use>
+                                    </svg>
+                                </button>
+                                <button class="swiper-button-next sub-intro__next">
+                                    <svg>
+                                        <use xlink:href="#arrow-left"></use>
+                                    </svg>
+                                </button>
+                            </article>
+                        </aside>
+                        <main class="sub-intro__swiper swiper _sub-intro__swiper white">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="sub-intro__text">
+                                        <h3>Немного упругости</h3>
+                                        <p>Чуть-чуть сияния, и ощущение, что вы о себе позаботились</p>
+                                    </div>
+                                    <picture><source srcset="img/sub-intro/1.webp" type="image/webp"><img src="img/sub-intro/1.png" alt="sub-intro-img"></picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sub-intro__text">
+                                        <h3>Немного упругости</h3>
+                                        <p>Чуть-чуть сияния, и ощущение, что вы о себе позаботились</p>
+                                    </div>
+                                    <picture><source srcset="img/sub-intro/2.webp" type="image/webp"><img src="img/sub-intro/2.png" alt="sub-intro-img"></picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sub-intro__text">
+                                        <h3>Немного упругости</h3>
+                                        <p>Чуть-чуть сияния, и ощущение, что вы о себе позаботились</p>
+                                    </div>
+                                    <picture><source srcset="img/sub-intro/3.webp" type="image/webp"><img src="img/sub-intro/3.png" alt="sub-intro-img"></picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sub-intro__text">
+                                        <h3>Немного упругости</h3>
+                                        <p>Чуть-чуть сияния, и ощущение, что вы о себе позаботились</p>
+                                    </div>
+                                    <picture><source srcset="img/sub-intro/4.webp" type="image/webp"><img src="img/sub-intro/4.png" alt="sub-intro-img"></picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sub-intro__text">
+                                        <h3>Немного упругости</h3>
+                                        <p>Чуть-чуть сияния, и ощущение, что вы о себе позаботились</p>
+                                    </div>
+                                    <picture><source srcset="img/sub-intro/5.webp" type="image/webp"><img src="img/sub-intro/5.png" alt="sub-intro-img"></picture>
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </section>
+                <article class="form article">
+                    <div class="container">
+                        <main class="form__row white">
+                            <div class="form__info">
+                                <h2>
+                                    Если вы тоже решили
+                                    <br>
+                                    «а почему бы и нет»
+                                </h2>
+                                <ul>
+                                    <li>Можно заказать много</li>
+                                    <li>Доступ возможен через северный интерфейс</li>
+                                    <li>Можно просто поболтать</li>
+                                </ul>
+                            </div>
+                            <form action="#">
+                                <div class="form__inputs">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        placeholder="Имя"
+                                        required
+                                    >
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        placeholder="Телефон"
+                                        required
+                                        maxlength="19"
+                                        minlength="19"
+                                    >
+                                </div>
+                                <label class="checkbox">
+                                    <input type="checkbox" class="custom-checkbox" required>
+                                    <div>
+                                        <svg
+                                            width="35"
+                                            height="35"
+                                            viewBox="0 0 35 35"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                x="1"
+                                                y="1"
+                                                width="33"
+                                                height="33"
+                                                rx="16.5"
+                                                fill="none"
+                                                stroke="white"
+                                                stroke-width="3"
+                                                stroke-linecap="round"
+                                            />
+                                        </svg>
+                                        <p>
+                                            Согласен(-на) на
+                                            <a target="_blank" href="#">обработку чего угоднох</a>
+                                            — лишь бы форма работала
+                                        </p>
+                                        <img src="img/svgicons/checked.svg" alt="checked">
+                                    </div>
+                                </label>
+                                <button type="submit" class="btn btn-with-arrow white">
+                                    Отправить
+                                    <div class="btn-with-arrow__arrow">
+                                        <svg>
+                                            <use xlink:href="#arrow-left"></use>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </form>
+                        </main>
+                    </div>
+                </article>
+                <article class="contacts article">
+                    <div class="container">
+                        <main class="contacts__row">
+                            <div class="contacts__info">
+                                <h2>Контакты</h2>
+                                <nav class="contacts__nav">
+                                    <a href="#">
+                                        <div class="contacts__link-image">
+                                            <img src="img/svgicons/address-white.svg" alt="address">
+                                        </div>
+                                        Офис, где делают странные, но симпатичные вещи
+                                    </a>
+                                    <div>
+                                        <div class="contacts__link-image">
+                                            <img src="img/svgicons/time-white.svg" alt="time">
+                                        </div>
+                                        Пн-Пт с 10:00 до 20:00
+                                    </div>
+                                    <div class="phones">
+                                        <a href="tel:8 (800) 444 44 44">
+                                            <div class="contacts__link-image">
+                                                <img src="img/svgicons/phone-white.svg" alt="phone">
+                                            </div>
+                                            8 (800) 444 44 44
+                                        </a>
+                                        <a href="tel:8 (800) 444 44 44">
+                                            <div class="contacts__link-image">
+                                                <img src="img/svgicons/phone-white.svg" alt="phone">
+                                            </div>
+                                            8 (800) 444 44 44
+                                        </a>
+                                    </div>
+                                    <a href="mailto:example@mail.ru">
+                                        <div class="contacts__link-image">
+                                            <img src="img/svgicons/mail-white.svg" alt="mail">
+                                        </div>
+                                        example@mail.ru
+                                    </a>
+                                </nav>
+                                <a href="#" class="btn btn-with-arrow green">
+                                    Связaться
+                                    <div class="btn-with-arrow__arrow">
+                                        <svg>
+                                            <use xlink:href="#arrow-left"></use>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3aa7be2e8b058f4ab2f3038b4ac56b7f8824c24127cf9c6b8141c05dadadc291&amp;source=constructor" frameborder="0"></iframe>
+                        </main>
+                    </div>
+                </article>
+            </main>
+            <footer class="footer">
+    <div class="container">
+        <nav class="footer__nav">
+            <a href="#">О системе</a>
+            <a href="#">Архитектура</a>
+            <a href="#">Для своих</a>
+            <a href="#">Состав</a>
+            <a href="#">Отзывы</a>
+        </nav>
+        <div class="footer__info">
+            <div class="footer__text">
+                <p>Коллаген © 2025</p>
+                <a href="../files/policy.pdf" target="_blank">Политика обработки чего-то личного</a>
+            </div>
+            <a href="/" class="footer__logo">
+                <img src="img/svgicons/logo.svg" alt="logo">
+            </a>
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </body>
+</html>
