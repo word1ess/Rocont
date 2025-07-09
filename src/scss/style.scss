@@ -1,0 +1,36 @@
+@import "fonts.scss", "_null.scss", "_variable.scss", "_common.scss", "_header.scss", "_main.scss", "_footer.scss";
+
+body {
+    font-family: $font;
+    color: #2e2d2b;
+    margin: 0;
+    line-height: 1.2;
+}
+//оболочка страницы
+.wrapper {
+    min-height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1;
+    background: -10% -10% url("../img/svgicons/page-bg.svg"), #f6f6f6;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1 1 auto;
+    z-index: 2;
+    padding-top: 84px;
+}
+
+.container {
+    position: relative;
+    z-index: 10;
+    margin: 0 auto;
+    padding: 0px 120px;
+    width: 100%;
+}
+
+@import "_adaptive.scss";

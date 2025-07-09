@@ -1,0 +1,110 @@
+@import "_variable.scss";
+// Контейнер для Header
+@function rem($px) {
+    @return calc($px / 14px) + rem;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 100000;
+    transition: all 300ms ease;
+    overscroll-behavior: contain;
+    padding: 8px 0px;
+
+    &__logo {
+        width: 130px;
+        height: 36px;
+
+        & img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__burger {
+        display: none;
+        width: 36px;
+        height: 36px;
+        aspect-ratio: 1/1;
+        position: relative;
+        z-index: 3;
+        background: $green;
+        border-radius: 50px;
+        &::after,
+        &::before,
+        & span {
+            content: "";
+            background: #fff;
+            width: 18px;
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            transition: all 300ms ease;
+            transform: translate(-50%, 0%);
+        }
+
+        &::before {
+            top: 12px;
+        }
+
+        & span {
+            top: 16.5px;
+        }
+        &::after {
+            bottom: 12px;
+        }
+
+        &.burger-active {
+            span {
+                opacity: 0;
+            }
+            &::before {
+                rotate: 45deg;
+                top: 23px;
+                left: 45%;
+            }
+            &::after {
+                left: 45%;
+                bottom: 24px;
+                rotate: -45deg;
+            }
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        background: #fff;
+        border-radius: 24px;
+        padding: 16px 36px 16px 24px;
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: rem(32px);
+
+        & a {
+            font-weight: 500;
+            font-size: rem(16px);
+            line-height: 110%;
+            color: $black;
+
+            &.green {
+                color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $green;
+                border-radius: 40px;
+                padding: rem(8px) rem(16px);
+            }
+        }
+    }
+}

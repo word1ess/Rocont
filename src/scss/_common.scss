@@ -1,0 +1,260 @@
+@import "_variable.scss";
+
+@function rem($px) {
+    @return calc($px / 14px) + rem;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    font-family: $secondFont;
+    color: $black;
+    line-height: 110%;
+
+    margin-bottom: rem(32px);
+}
+
+*.white {
+    h1,
+    h2,
+    h3,
+    p,
+    li {
+        color: $white;
+    }
+}
+
+h1 {
+    font-size: rem(64px);
+}
+h2 {
+    font-size: rem(40px);
+}
+h3 {
+    font-size: rem(24px);
+    margin-bottom: rem(8px);
+}
+p,
+li {
+    font-family: $font;
+    font-weight: 500;
+    font-size: rem(21px);
+    line-height: 140%;
+    letter-spacing: -0.03em;
+    color: $black;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+li {
+    position: relative;
+    padding-left: 32px;
+    &::before {
+        content: "";
+        top: 50%;
+        transform: translate(0%, -50%);
+        left: 0px;
+        position: absolute;
+        background: center / contain no-repeat url("../img/svgicons/list-arrow.svg"), #fff;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+}
+input {
+    display: block;
+    width: 100%;
+
+    border-radius: 40px;
+    padding: 8px 16px 8px 24px;
+    font-weight: 400;
+    font-size: rem(16px);
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: $black;
+
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+    &::placeholder {
+        color: #131312;
+        opacity: 0.5;
+    }
+}
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    border-radius: 40px;
+    padding: 16px 16px 16px 24px;
+    background: $white;
+    color: $black;
+
+    transition: all 300ms ease;
+    max-width: fit-content;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 110%;
+
+    &:hover {
+        opacity: 0.8;
+    }
+    &:active {
+        filter: grayscale(0.4);
+        opacity: 1;
+    }
+    &.green {
+        background: $green;
+        color: $white;
+    }
+}
+.btn-with-arrow {
+    &__arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $white;
+        border-radius: 50px;
+        padding-right: 4px;
+        svg {
+            width: 48px;
+            height: 20px;
+            rotate: 180deg;
+
+            stroke: $green;
+        }
+    }
+
+    &.white .btn-with-arrow {
+        &__arrow {
+            background: $green;
+
+            svg {
+                stroke: $white;
+            }
+        }
+    }
+}
+.btns {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    position: static;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background: none;
+    width: 48px;
+    height: 20px;
+    transition: all 300ms ease;
+
+    &::after {
+        display: none;
+    }
+
+    svg {
+        fill: none;
+        stroke: $black;
+    }
+    &:hover {
+        opacity: 0.8;
+    }
+    &:active {
+        filter: grayscale(0.4);
+        opacity: 1;
+    }
+}
+.swiper-button-prev {
+    padding-left: 4px;
+}
+.swiper-button-next {
+    background: $green;
+    padding-right: 4px;
+    svg {
+        stroke: $white;
+        transform: rotate(180deg);
+    }
+}
+.section,
+.article {
+    padding: 48px 0px;
+    &:last-child {
+        padding-bottom: 0px;
+    }
+    &:first-child {
+        padding-top: 0px;
+    }
+}
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding: 0px 0px 0px 32px;
+    cursor: pointer;
+    margin: 12px 0px 16px;
+
+    & div {
+        p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 100%;
+            letter-spacing: -0.02em;
+            padding: 6px 0px;
+        }
+
+        a {
+            color: inherit;
+            font-size: inherit;
+        }
+
+        svg {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 24px;
+            height: 24px;
+
+            transition: all 300ms ease;
+
+            stroke-dasharray: 103;
+        }
+
+        img {
+            position: absolute;
+            left: 8px;
+            top: 6px;
+            opacity: 0;
+            transition: all 300ms ease;
+        }
+    }
+}
+.custom-checkbox {
+    position: absolute;
+    appearance: none;
+    left: -1000000000000px;
+
+    &:checked {
+        & + div {
+            img {
+                opacity: 1;
+            }
+            svg {
+                transform: rotate(90deg);
+                stroke-dasharray: 77.75 25.92;
+            }
+        }
+    }
+}
